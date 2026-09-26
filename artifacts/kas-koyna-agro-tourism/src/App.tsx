@@ -1,7 +1,7 @@
 import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
 import {
   ArrowRight, ArrowUpRight, Camera, Check, ChevronDown, ChevronLeft,
-  ChevronRight, CircleCheck, Compass, ExternalLink, Home as HomeIcon, Leaf, Mail, MapPin, Menu,
+  ChevronRight, CircleCheck, Compass, ExternalLink, Leaf, Mail, MapPin, Menu,
   Mountain, Phone, Send, Tent, Users, Utensils, Waves, X,
 } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -20,12 +20,39 @@ const images = {
   trail: 'https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1400&q=85',
   harvest: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=85',
 };
+const heroSlides = [
+  { src: '/hero-cottages.png', alt: 'Red-roof cottage rooms at Kas Koyna', label: 'Stay close to the water' },
+  { src: '/hero-lakeside-view.png', alt: 'Koyna backwaters and green hills seen from above', label: 'Take the long view' },
+  { src: '/hero-garden-view.png', alt: 'Garden path and lake view beside the cottages', label: 'A slower morning' },
+  { src: '/hero-tent-room.png', alt: 'Colourful beds inside a comfortable tent room', label: 'Rest your way' },
+  { src: '/hero-camping.png', alt: 'Tents set beside the Koyna backwaters', label: 'Sleep under a wider sky' },
+  { src: '/hero-activity.png', alt: 'A lively outdoor activity at the property', label: 'Make a day of it' },
+  { src: '/hero-backwaters.png', alt: 'Quiet Koyna backwaters beside the property', label: 'Meet the backwaters' },
+  { src: '/hero-stay.png', alt: 'A welcoming outdoor stay area at Kas Koyna', label: 'Come as you are' },
+];
 const waLink = 'https://wa.me/919423260999?text=Hello%20Kas%20koyna%20agrotourism%20i%20am%20interested%20in%20your%20restaurant%20and%20give%20me%20more%20details%20regarding%20plan%20please%20connect%20to%20me.';
 const phoneLink = 'tel:+919423260999';
 
 const navItems = [
   ['Home', '/'], ['Our story', '/about'], ['Gallery', '/gallery'], ['Explore', '/attractions'],
   ['Things to do', '/activities'], ['Stay & dine', '/packages'], ['The slow invitation', '/campaign'], ['Contact', '/contact'],
+];
+const activityItems = [
+  { title: 'Vasota Jungle Trek', text: 'A forest adventure through the Koyna Wildlife Sanctuary, with a boat ride across the backwaters.', image: 'https://kaskoynaagrotourism.com/assets/web/Vasota.jpg', icon: Mountain },
+  { title: 'Boating & rafting', text: 'See the Koyna backwaters from the water and make time for the landscape around you.', image: 'https://kaskoynaagrotourism.com/assets/web/Boating.JPG', icon: Waves },
+  { title: 'Try your hand at fishing', text: 'A calm, picture-perfect setting for a quiet afternoon by the water.', image: 'https://kaskoynaagrotourism.com/assets/web/Fishing.jpg', icon: Compass },
+  { title: 'Swimming with life jackets', text: 'A water experience with life jackets, subject to local conditions and safe arrangements.', image: 'https://kaskoynaagrotourism.com/assets/web/Swmming.jpg', icon: Waves },
+  { title: 'Mud bath', text: 'A playful, earthy experience for groups looking to do something different together.', image: 'https://kaskoynaagrotourism.com/assets/web/MudBath.jpg', icon: Leaf },
+  { title: 'Cricket', text: 'Pick a team, find a patch of open ground, and let the afternoon take its own course.', image: 'https://kaskoynaagrotourism.com/assets/web/Cricket.jpg', icon: Users },
+  { title: 'Chess', text: 'A slower game for long afternoons, quiet corners, and friendly rivalries.', image: 'https://kaskoynaagrotourism.com/assets/web/chess.jpg', icon: Compass },
+  { title: 'Badminton', text: 'Easy outdoor fun for families, friends, and groups of every pace.', image: 'https://kaskoynaagrotourism.com/assets/web/badminton.jpg', icon: Users },
+  { title: 'Carrom', text: 'Keep the table busy after lunch with a classic group favourite.', image: 'https://kaskoynaagrotourism.com/assets/web/carrom.jpg', icon: Compass },
+  { title: 'Firecamp', text: 'Wind down together under the open sky. Ask us about current arrangements.', image: 'https://kaskoynaagrotourism.com/assets/web/campfire.jpg', icon: Tent },
+];
+const testimonials = [
+  { quote: 'The boating experience was beautiful. Our tent house was right beside the Koyna backwaters and swimming with lifejackets made the day unforgettable.', by: 'Amit Sonawale' },
+  { quote: 'The food was lovely and the management was very helpful. We came as a group of 50 and everyone had a comfortable time.', by: 'Ramesh K' },
+  { quote: 'Great service, picturesque mountains and a lake nearby. A comfortable budget stay for a slow weekend.', by: 'Maharashtra Instagrammers' },
 ];
 
 function SiteHeader() {
@@ -54,7 +81,17 @@ function SiteHeader() {
 }
 
 function Footer() {
+  const [email, setEmail] = useState('');
+  const [subscribed, setSubscribed] = useState(false);
+  const subscribe = (event: FormEvent) => {
+    event.preventDefault();
+    if (email.trim() && email.includes('@')) setSubscribed(true);
+  };
   return <footer className="site-footer">
+    <div className="container-wide footer-intro"><div><div className="eyebrow" style={{ color: '#f1ba76' }}>Stay a little longer</div><h2>Bring the quiet home with you.</h2></div><p>Occasional notes from Bamnoli — seasonal views, thoughtful ideas for your next visit, and the good things happening around Kas Koyna.</p></div>
+    <div className="container-wide footer-newsletter">
+      {subscribed ? <div className="newsletter-success"><CircleCheck size={18} /> You’re on the list. We’ll keep it thoughtful.</div> : <form onSubmit={subscribe}><label htmlFor="footer-email">Get the next quiet note</label><div className="newsletter-form"><input id="footer-email" type="email" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Your email address" aria-label="Your email address" /><button type="submit" aria-label="Subscribe to Kas Koyna updates"><ArrowRight size={16} /></button></div></form>}
+    </div>
     <div className="container-wide footer-grid">
       <div><img src={logo} alt="Kas Koyna Agro Tourism" className="brand-logo" /><p style={{ maxWidth: 330, marginTop: 20 }}>A quieter way to meet Koyna — with local food, forest air, and the backwaters close by.</p><p>At-Shembadi, Post-Bamnoli,<br />Tal-Jawali, Dist-Satara,<br />Maharashtra 415002.</p></div>
       <div><h3>Explore</h3>{navItems.slice(1, 6).map(([label, href]) => <Link key={href} href={href} data-testid={`link-footer-${label.toLowerCase().replace(/\s/g, '-')}`}>{label}</Link>)}<Link href="/campaign" data-testid="link-footer-campaign">The slow invitation</Link><Link href="/faq" data-testid="link-footer-faq">FAQs</Link></div>
@@ -65,6 +102,18 @@ function Footer() {
 }
 
 function Layout({ children }: { children: ReactNode }) {
+  const [location] = useLocation();
+  useEffect(() => {
+    const revealNodes = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal], .page-content > section, .page-content > div.container-wide'));
+    revealNodes.forEach((node) => node.classList.remove('is-visible'));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
+      });
+    }, { threshold: 0.13, rootMargin: '0px 0px -8% 0px' });
+    revealNodes.forEach((node) => observer.observe(node));
+    return () => observer.disconnect();
+  }, [location]);
   return <div className="site-shell noise"><SiteHeader />{children}<Footer /><a href={waLink} target="_blank" rel="noreferrer" className="whatsapp-fab" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp" data-testid="button-floating-whatsapp"><FaWhatsapp size={24} /></a></div>;
 }
 
@@ -73,39 +122,56 @@ function PageHero({ eyebrow, title, text }: { eyebrow: string; title: string; te
 }
 
 function Home() {
+  const [heroSlide, setHeroSlide] = useState(0);
   const [testimonial, setTestimonial] = useState(0);
-  const testimonials = [
-    { quote: 'The boating experience was beautiful. Our tent house was right beside the Koyna backwaters and swimming with lifejackets made the day unforgettable.', by: 'Amit Sonawale' },
-    { quote: 'The food was lovely and the management was very helpful. We came as a group of 50 and everyone had a comfortable time.', by: 'Ramesh K' },
-    { quote: 'Great service, picturesque mountains and a lake nearby. A comfortable budget stay for a slow weekend.', by: 'Maharashtra Instagrammers' },
-  ];
+  useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+    const timer = window.setInterval(() => setHeroSlide((current) => (current + 1) % heroSlides.length), 3000);
+    return () => window.clearInterval(timer);
+  }, []);
+  useEffect(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+    const timer = window.setInterval(() => setTestimonial((current) => (current + 1) % testimonials.length), 5200);
+    return () => window.clearInterval(timer);
+  }, []);
   return <Layout>
     <main>
       <section className="hero">
-        <img src={images.hero} alt="Misty green hills and a quiet lake near Koyna" className="hero-image" />
+        <div className="hero-slides" aria-label="Kas Koyna photo story">{heroSlides.map((slide, index) => <img key={slide.src} src={slide.src} alt={slide.alt} className={`hero-image ${index === heroSlide ? 'is-active' : ''}`} />)}</div>
+        <div className="hero-tint" />
         <div className="container-wide hero-content">
           <div className="eyebrow reveal">Bamnoli · Satara · Maharashtra</div>
+          <p className="hero-slide-label reveal">{heroSlides[heroSlide].label}</p>
           <h1 className="display-xl reveal reveal-delay-1" style={{ margin: '18px 0 24px' }}>Come back<br /><em style={{ color: '#f1ba76', fontWeight: 500 }}>to the quiet.</em></h1>
           <p className="hero-sub reveal reveal-delay-2">Rustic cottage stays, warm local food, and the Koyna backwaters at your doorstep. A nature-first escape for families, friends, and unhurried days.</p>
           <div className="hero-meta reveal reveal-delay-3"><span><MapPin size={15} /> At-Shembadi, Bamnoli</span><span><Waves size={15} /> Koyna backwaters</span></div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 30 }} className="reveal reveal-delay-3"><Link href="/contact" className="btn-primary" data-testid="link-hero-plan">Plan your visit <ArrowRight size={16} /></Link><Link href="/gallery" className="btn-outline" style={{ color: '#fbf8ee', borderColor: 'rgba(255,255,255,.45)' }} data-testid="link-hero-gallery">See the place <Camera size={15} /></Link></div>
         </div>
+        <div className="hero-pager" aria-label="Photo story controls">{heroSlides.map((slide, index) => <button key={slide.src} className={index === heroSlide ? 'active' : ''} onClick={() => setHeroSlide(index)} aria-label={`Show photo ${index + 1}`} />)}</div>
         <div className="scroll-cue">Scroll to wander</div>
       </section>
 
-      <section className="section-pad"><div className="container-wide split-feature">
+      <section className="section-pad" data-reveal><div className="container-wide split-feature">
         <div className="image-card feature-image"><img src={images.lake} alt="Koyna lake surrounded by green hills" loading="lazy" /></div>
         <div className="feature-copy"><div className="eyebrow section-label">The Kas Koyna way</div><h2 className="display-lg">A little closer to nature.</h2><div className="prose-copy"><p>There is a different kind of holiday waiting in Bamnoli. Mornings arrive with lake mist, meals carry the warmth of a home kitchen, and the best plans often begin with “let’s see where the path goes.”</p><p>Kas Koyna Agro Tourism is your welcoming base for the Koyna backwaters, village life, forest trails, and the easygoing Maharashtra experience around them.</p></div><Link href="/about" className="btn-quiet" data-testid="link-home-story">Read our story <ArrowRight size={15} /></Link><div className="stat-row"><div className="stat"><strong>01</strong><span>quiet lakeside setting</span></div><div className="stat"><strong>02</strong><span>ways to slow down</span></div><div className="stat"><strong>∞</strong><span>space for your people</span></div></div></div>
       </div></section>
 
-      <section className="section-pad dark-panel"><div className="container-wide"><div style={{ display: 'flex', justifyContent: 'space-between', gap: 25, alignItems: 'end', marginBottom: 35 }}><div><div className="eyebrow section-label">Make a day of it</div><h2 className="display-lg" style={{ margin: '15px 0 0' }}>There is more<br />outside the room.</h2></div><Link href="/activities" className="btn-outline" style={{ color: '#f4f0e3', borderColor: 'rgba(244,240,227,.4)' }} data-testid="link-home-activities">Explore activities <ArrowUpRight size={15} /></Link></div>
+      <section className="section-pad dark-panel" data-reveal><div className="container-wide"><div style={{ display: 'flex', justifyContent: 'space-between', gap: 25, alignItems: 'end', marginBottom: 35 }}><div><div className="eyebrow section-label">Make a day of it</div><h2 className="display-lg" style={{ margin: '15px 0 0' }}>There is more<br />outside the room.</h2></div><Link href="/activities" className="btn-outline" style={{ color: '#f4f0e3', borderColor: 'rgba(244,240,227,.4)' }} data-testid="link-home-activities">Explore activities <ArrowUpRight size={15} /></Link></div>
         <div className="experience-grid"><figure className="image-card experience-tile tall"><img src={images.boat} alt="Boating on a calm blue lake" loading="lazy" /><figcaption>Boat into the backwaters</figcaption></figure><figure className="image-card experience-tile"><img src={images.trail} alt="A trail through a green forest" loading="lazy" /><figcaption>Follow a forest trail</figcaption></figure><figure className="image-card experience-tile"><img src={images.food} alt="Traditional local meal" loading="lazy" /><figcaption>Eat as the locals do</figcaption></figure><figure className="image-card experience-tile"><img src={images.camping} alt="Tent camping among trees" loading="lazy" /><figcaption>Sleep under a wider sky</figcaption></figure><figure className="image-card experience-tile"><img src={images.mountain} alt="Mountain landscape" loading="lazy" /><figcaption>Take the long view</figcaption></figure></div>
       </div></section>
 
-      <section className="section-pad quote-section"><div className="container-wide"><div className="quote-mark">“</div><div className="quote-text" data-testid="text-testimonial">{testimonials[testimonial].quote}</div><div className="quote-byline"><span className="quote-dot" /> {testimonials[testimonial].by}</div><div style={{ display: 'flex', gap: 8, marginTop: 28 }}><button className="filter-pill" onClick={() => setTestimonial((testimonial + testimonials.length - 1) % testimonials.length)} aria-label="Previous testimonial" data-testid="button-testimonial-previous"><ChevronLeft size={16} /></button><button className="filter-pill" onClick={() => setTestimonial((testimonial + 1) % testimonials.length)} aria-label="Next testimonial" data-testid="button-testimonial-next"><ChevronRight size={16} /></button></div></div></section>
-      <section className="cta-band"><div className="container-wide"><div className="eyebrow" style={{ color: '#f1ba76' }}>Your next easy day</div><h2 className="display-lg" style={{ maxWidth: 630, margin: '16px 0 25px' }}>Bring your people.<br />We’ll keep it simple.</h2><Link href="/contact" className="btn-primary" data-testid="link-home-contact">Start a conversation <ArrowRight size={15} /></Link></div></section>
+      <section className="section-pad quote-section" data-reveal><div className="container-wide testimonial-shell"><div className="eyebrow section-label">Words from the way back</div><h2 className="display-lg testimonial-heading">Good days, remembered.</h2><div className="testimonial-viewport"><div className="testimonial-track" style={{ transform: `translateX(-${testimonial * 100}%)` }}>{testimonials.map((item) => <article className="testimonial-card" key={item.by}><div className="quote-mark">“</div><p className="quote-text">{item.quote}</p><div className="quote-byline"><span className="quote-dot" /> {item.by}</div></article>)}</div></div><div className="testimonial-controls"><span>{String(testimonial + 1).padStart(2, '0')} / {String(testimonials.length).padStart(2, '0')}</span><div><button className="filter-pill" onClick={() => setTestimonial((testimonial + testimonials.length - 1) % testimonials.length)} aria-label="Previous testimonial" data-testid="button-testimonial-previous"><ChevronLeft size={16} /></button><button className="filter-pill" onClick={() => setTestimonial((testimonial + 1) % testimonials.length)} aria-label="Next testimonial" data-testid="button-testimonial-next"><ChevronRight size={16} /></button></div></div></div></section>
+      <ActivitySection compact />
+      <section className="cta-band" data-reveal><div className="container-wide"><div className="eyebrow" style={{ color: '#f1ba76' }}>Your next easy day</div><h2 className="display-lg" style={{ maxWidth: 630, margin: '16px 0 25px' }}>Bring your people.<br />We’ll keep it simple.</h2><Link href="/contact" className="btn-primary" data-testid="link-home-contact">Start a conversation <ArrowRight size={15} /></Link></div></section>
     </main>
   </Layout>;
+}
+
+function ActivitySection({ compact = false }: { compact?: boolean }) {
+  const items = compact ? activityItems.slice(0, 6) : activityItems;
+  return <section className={`activity-section section-pad ${compact ? 'activity-section-compact' : ''}`} data-reveal><div className="container-wide"><div className="activity-section-heading"><div><div className="eyebrow section-label">Kas Koyna activities</div><h2 className="display-lg">{compact ? <>A day can go<br />anywhere here.</> : <>Choose your own<br />kind of fun.</>}</h2></div>{compact && <Link href="/activities" className="btn-quiet" data-testid="link-home-all-activities">See all activities <ArrowRight size={15} /></Link>}</div><div className="activity-grid">{items.map((item) => { const ActivityIcon = item.icon; return <article className="activity-card" key={item.title}><div className="activity-card-image"><img src={item.image} alt={item.title} loading="lazy" /><span className="activity-icon"><ActivityIcon size={18} /></span></div><div className="activity-card-copy"><h3>{item.title}</h3><p>{item.text}</p><Link href="/contact" data-testid={`link-activity-enquiry-${item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>Ask about this <ArrowRight size={13} /></Link></div></article>; })}</div></div></section>;
 }
 
 function About() {
@@ -116,12 +182,28 @@ function About() {
 }
 
 const galleryItems = [
-  ['Lake & hills', images.lake, 'A quiet edge of Koyna'], ['Boating', images.boat, 'Out on the backwaters'], ['Stay', images.cottage, 'A rustic place to rest'], ['Food', images.food, 'Local food, shared slowly'], ['Forest', images.forest, 'Green all around'], ['Camping', images.camping, 'A night under trees'], ['Trails', images.trail, 'Wander without hurry'], ['Landscape', images.mountain, 'The long view'], ['Village life', images.harvest, 'The colours of the land'],
+  ['Stay', 'https://kaskoynaagrotourism.com/assets/web/gallery/1.jpg', 'A comfortable stay in Bamnoli'],
+  ['Stay', 'https://kaskoynaagrotourism.com/assets/web/gallery/2.jpg', 'Life around the agro-tourism stay'],
+  ['Landscape', 'https://kaskoynaagrotourism.com/assets/web/gallery/3.jpg', 'The colours of the Satara landscape'],
+  ['Boating', 'https://kaskoynaagrotourism.com/assets/web/gallery/4.jpg', 'A quiet edge of the Koyna backwaters'],
+  ['Boating', 'https://kaskoynaagrotourism.com/assets/web/gallery/5.jpg', 'Out on the backwaters'],
+  ['Stay', 'https://kaskoynaagrotourism.com/assets/web/gallery/6.jpg', 'A slower morning at Bamnoli'],
+  ['Stay', 'https://kaskoynaagrotourism.com/assets/web/gallery/7.jpg', 'A warm welcome by the lake'],
+  ['Camping', 'https://kaskoynaagrotourism.com/assets/web/gallery/8.jpg', 'Camping close to nature'],
+  ['Trekking', 'https://kaskoynaagrotourism.com/assets/web/gallery/9.jpg', 'Vasota and the forest country'],
+  ['Activities', 'https://kaskoynaagrotourism.com/assets/web/gallery/10.jpg', 'A day out around Kas Koyna'],
+  ['Trekking', 'https://kaskoynaagrotourism.com/assets/web/gallery/11.png', 'A forest trail worth taking'],
+  ['Attractions', 'https://kaskoynaagrotourism.com/assets/web/gallery/Datta_Mandir.jpg', 'Datta Mandir nearby'],
+  ['Boating', 'https://kaskoynaagrotourism.com/assets/web/gallery/13.jpg', 'Koyna water and hills'],
+  ['Boating', 'https://kaskoynaagrotourism.com/assets/web/gallery/14.jpg', 'Boating in the backwaters'],
+  ['Trekking', 'https://kaskoynaagrotourism.com/assets/web/gallery/15.JPG', 'Vasota fort country'],
+  ['Camping', 'https://kaskoynaagrotourism.com/assets/web/gallery/16.JPG', 'A night under a wider sky'],
+  ['Landscape', 'https://kaskoynaagrotourism.com/assets/web/gallery/17.JPG', 'The Koyna landscape'],
 ];
 function Gallery() {
   const [filter, setFilter] = useState('All');
   const [active, setActive] = useState<number | null>(null);
-  const filters = ['All', 'Lake & hills', 'Boating', 'Stay', 'Food', 'Forest', 'Camping'];
+  const filters = ['All', 'Boating', 'Stay', 'Camping', 'Trekking', 'Activities', 'Landscape', 'Attractions'];
   const shown = filter === 'All' ? galleryItems : galleryItems.filter(([category]) => category === filter);
   return <Layout><PageHero eyebrow="A glimpse of Bamnoli" title="Come for the view. Stay for the feeling." text="A few frames from the landscape, the table, and the unhurried rhythm around Kas Koyna." /><main className="section-pad page-content"><div className="container-wide"><div className="filter-row" role="group" aria-label="Gallery filters">{filters.map(item => <button key={item} className={`filter-pill ${filter === item ? 'active' : ''}`} onClick={() => setFilter(item)} data-testid={`button-gallery-filter-${item.toLowerCase().replace(/\W/g, '-')}`}>{item}</button>)}</div><div className="gallery-grid">{shown.map(([category, src, caption], index) => <figure className="gallery-item" key={`${category}-${index}`} onClick={() => setActive(galleryItems.indexOf(shown[index]))} data-testid={`button-gallery-image-${index}`}><img src={src} alt={caption} loading="lazy" /><figcaption>{caption}</figcaption></figure>)}</div></div></main>{active !== null && <div className="lightbox" role="dialog" aria-label="Gallery image"><button onClick={() => setActive(null)} aria-label="Close image" data-testid="button-lightbox-close"><X /></button><img src={galleryItems[active][1]} alt={galleryItems[active][2]} /><p>{galleryItems[active][2]}</p></div>}</Layout>;
 }
@@ -139,10 +221,7 @@ function Attractions() {
 }
 
 function Activities() {
-  const activities = [
-    [Waves, 'Boating & water time', 'See the backwaters from a different angle, take a boat ride, or simply sit near the water as the afternoon changes.'], [Mountain, 'Trekking & trails', 'Choose a walk that suits your group and the season. The surrounding hills reward a slow start and good shoes.'], [Tent, 'Camping', 'Trade the hum of the city for a night closer to the open sky. Availability and arrangements are best confirmed in advance.'], [Utensils, 'Local food', 'Taste authentic local cuisine prepared in traditional style, with generous conversation around the table.'], [Compass, 'Sightseeing', 'Use Bamnoli as a base for lake country, forest landscapes, village roads, and nearby attractions.'], [HomeIcon, 'Cottage downtime', 'Read, rest, talk, and let the place do what it does best — create space between one plan and the next.'],
-  ];
-  return <Layout><PageHero eyebrow="Ways to spend a day" title="Choose your own pace." text="An early boat, a forest walk, a long lunch, or nothing at all. Your time here can be as full or as spacious as you like." /><main className="section-pad page-content"><div className="container-wide"><div className="card-grid">{activities.map(([Icon, title, text]) => { const ActivityIcon = Icon as typeof Waves; return <article className="info-card" key={title as string}><div className="icon-disc"><ActivityIcon size={21} /></div><h3>{title as string}</h3><p className="body-copy">{text as string}</p><Link href="/contact" style={{ color: 'hsl(var(--primary))', fontSize: '.8rem', fontWeight: 700, textDecoration: 'none' }} data-testid={`link-activity-${(title as string).toLowerCase().replace(/\s/g, '-')}`}>Ask about this <ArrowRight size={13} style={{ display: 'inline' }} /></Link></article>; })}</div></div></main></Layout>;
+  return <Layout><PageHero eyebrow="Ways to spend a day" title="Choose your own pace." text="An early boat, a forest walk, a long lunch, or nothing at all. Your time here can be as full or as spacious as you like." /><main className="page-content"><ActivitySection /><section className="section-pad activity-note" data-reveal><div className="container-wide"><div className="activity-note-card"><div className="eyebrow">A note before you go</div><h2 className="display-lg">Ask about the day’s conditions.</h2><p className="body-copy">Water levels, weather, local permissions, and activity arrangements can change. Confirm the current details with our team before you travel.</p><Link href="/contact" className="btn-primary">Plan with us <ArrowRight size={15} /></Link></div></div></section></main></Layout>;
 }
 
 function Packages() {
@@ -228,8 +307,16 @@ function NotFound() {
   return <Layout><main className="section-pad" style={{ minHeight: '70vh', display: 'grid', placeItems: 'center', textAlign: 'center' }}><div><div className="eyebrow">Off the trail</div><h1 className="display-lg" style={{ margin: '15px 0' }}>This page wandered away.</h1><p className="body-copy">Let’s take you back to the lake.</p><Link href="/" className="btn-primary" style={{ marginTop: 18 }} data-testid="link-not-found-home">Back home <ArrowRight size={15} /></Link></div></main></Layout>;
 }
 
+function ScrollToTop() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location]);
+  return null;
+}
+
 function App() {
-  return <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><Seo /><Switch><Route path="/" component={Home} /><Route path="/about" component={About} /><Route path="/gallery" component={Gallery} /><Route path="/attractions" component={Attractions} /><Route path="/activities" component={Activities} /><Route path="/campaign" component={Campaign} /><Route path="/packages" component={Packages} /><Route path="/contact" component={Contact} /><Route path="/faq" component={FAQ} /><Route path="/privacy" component={Privacy} /><Route component={NotFound} /></Switch></WouterRouter>;
+  return <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><Seo /><ScrollToTop /><Switch><Route path="/" component={Home} /><Route path="/about" component={About} /><Route path="/gallery" component={Gallery} /><Route path="/attractions" component={Attractions} /><Route path="/activities" component={Activities} /><Route path="/campaign" component={Campaign} /><Route path="/packages" component={Packages} /><Route path="/contact" component={Contact} /><Route path="/faq" component={FAQ} /><Route path="/privacy" component={Privacy} /><Route component={NotFound} /></Switch></WouterRouter>;
 }
 
 export default App;
