@@ -112,7 +112,7 @@
 .nav-inner { height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand-logo { width: 154px; height: auto; object-fit: contain; }
 .nav-links { display: flex; align-items: center; gap: 24px; }
-.nav-links a { color: inherit; text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .03em; opacity: .86; transition: opacity .2s, color .2s; }
+.nav-links a { color: inherit; text-decoration: none; font-size: .88rem; font-weight: 600; letter-spacing: .01em; opacity: .86; transition: opacity .2s, color .2s; }
 .nav-links a:hover, .nav-links a.active { opacity: 1; color: #f3bd78; }
 .menu-button { display: none; border: 0; background: transparent; color: inherit; padding: 8px; }
 .mobile-nav { display: none; }
@@ -212,6 +212,12 @@
 .package-card { padding: 32px; border-radius: 1.4rem; background: hsl(var(--primary)); color: #f6f2e8; }
 .package-card.alt { background: hsl(var(--secondary)); color: hsl(var(--foreground)); }
 .package-card h3 { font: 2rem var(--app-font-serif); margin: 14px 0; }
+.package-grid-official { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.package-details { min-height: 88px; margin: 0; color: inherit; opacity: .76; line-height: 1.7; font-size: .86rem; }
+.package-price-row { display: flex; align-items: baseline; gap: 9px; margin-top: 20px; }
+.package-price { font: 2rem var(--app-font-serif); color: inherit; }
+.package-price-row span { opacity: .66; font-size: .76rem; }
+.package-note { margin-top: 22px; padding: 24px; border: 1px solid hsl(var(--border)); border-radius: 1rem; }
 .package-card ul { margin: 24px 0 0; padding: 0; list-style: none; display: grid; gap: 12px; }
 .package-card li { display: flex; gap: 9px; color: inherit; opacity: .82; font-size: .86rem; }
 .package-card .btn-outline { border-color: currentColor; color: inherit; }
@@ -235,12 +241,12 @@
 .error-text { color: hsl(var(--destructive)); font-size: .75rem; }
 .success-panel { padding: 40px 20px; text-align: center; color: hsl(var(--primary)); }
 .map-frame { width: 100%; min-height: 310px; border: 0; border-radius: 1.2rem; filter: saturate(.75); }
-.site-footer { color: rgba(248,244,233,.8); background: #182e26; padding: 66px 0 28px; }
-.footer-intro { display: flex; align-items: end; justify-content: space-between; gap: 40px; padding-bottom: 32px; }
-.footer-intro h2 { max-width: 540px; margin: 12px 0 0; color: #f7f2e8; font: clamp(2rem, 4vw, 3.5rem)/1 var(--app-font-serif); letter-spacing: -.04em; }
-.footer-intro > p { max-width: 390px; margin: 0; color: rgba(248,244,233,.62); line-height: 1.7; font-size: .84rem; }
-.footer-newsletter { display: flex; justify-content: flex-end; padding: 0 0 42px; }
-.footer-newsletter form { width: min(100%, 440px); }
+.site-footer { color: rgba(248,244,233,.8); background: #182e26; padding: 38px 0 22px; }
+.footer-main-row { display: grid; grid-template-columns: 1.15fr .72fr .95fr 1.35fr; gap: 34px; align-items: start; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,.15); }
+.footer-brand .brand-logo { width: 130px; }
+.footer-brand p { max-width: 255px; margin: 13px 0 0; }
+.footer-newsletter form { width: 100%; }
+.footer-note { max-width: 340px; margin: 0 0 18px; }
 .footer-newsletter label { display: block; margin-bottom: 9px; color: #f1ba76; font: .68rem var(--app-font-mono); letter-spacing: .12em; text-transform: uppercase; }
 .newsletter-form { display: flex; gap: 8px; }
 .newsletter-form input { min-width: 0; flex: 1; border: 1px solid rgba(255,255,255,.23); border-radius: 999px; padding: 13px 16px; color: #f7f2e8; background: rgba(255,255,255,.07); outline: none; }
@@ -248,12 +254,13 @@
 .newsletter-form input:focus { border-color: #f1ba76; }
 .newsletter-form button { display: grid; place-items: center; width: 47px; border: 0; border-radius: 50%; color: #182e26; background: #f1ba76; }
 .newsletter-success { display: flex; align-items: center; gap: 9px; color: #f1ba76; font-size: .82rem; }
-.footer-grid { display: grid; grid-template-columns: 1.3fr .7fr 1fr; gap: 50px; padding-bottom: 45px; border-bottom: 1px solid rgba(255,255,255,.15); }
 .site-footer h3 { margin: 0 0 18px; color: #f7f2e8; font: 1.15rem var(--app-font-serif); }
 .site-footer p { color: rgba(248,244,233,.62); line-height: 1.7; font-size: .82rem; }
 .site-footer a { display: block; width: fit-content; margin: 0 0 10px; color: rgba(248,244,233,.68); text-decoration: none; font-size: .82rem; }
 .site-footer a:hover { color: #f1ba76; }
-.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 22px; color: rgba(248,244,233,.44); font-size: .7rem; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; color: rgba(248,244,233,.44); font-size: .7rem; }
+.footer-legal { display: flex; align-items: center; gap: 9px; }
+.footer-legal a { display: inline; margin: 0; }
 .whatsapp-fab { position: fixed; z-index: 15; right: 24px; bottom: 22px; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; color: #f7f5ec; background: #2c8c61; box-shadow: 0 10px 28px rgba(26,78,55,.35); transition: transform .25s; }
 .whatsapp-fab:hover { transform: translateY(-4px); }
 
@@ -275,11 +282,11 @@
   .experience-grid .tall { grid-row: span 2; }
   .card-grid { grid-template-columns: 1fr; }
   .activity-grid { grid-template-columns: 1fr 1fr; }
-  .activity-section-heading, .footer-intro { align-items: flex-start; flex-direction: column; }
+  .activity-section-heading { align-items: flex-start; flex-direction: column; }
   .form-grid { grid-template-columns: 1fr; }
   .form-field.full { grid-column: auto; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
-  .footer-grid > :first-child { grid-column: 1/-1; }
+  .footer-main-row { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .footer-brand, .footer-newsletter { grid-column: 1/-1; }
   .footer-bottom { flex-direction: column; }
   .quote-text { font-size: 1.6rem; }
 }
@@ -297,6 +304,10 @@
   .form-card { padding: 22px; }
   .activity-grid { grid-template-columns: 1fr; }
   .activity-card-copy p { min-height: auto; }
+  .package-grid-official { grid-template-columns: 1fr; }
+  .package-details { min-height: auto; }
+  .footer-main-row { grid-template-columns: 1fr; gap: 24px; }
+  .footer-brand, .footer-newsletter { grid-column: auto; }
   .testimonial-card { min-height: 300px; padding: 26px 22px 28px; }
   .testimonial-card .quote-text { font-size: 1.45rem; }
   .activity-note-card { padding: 25px; }
