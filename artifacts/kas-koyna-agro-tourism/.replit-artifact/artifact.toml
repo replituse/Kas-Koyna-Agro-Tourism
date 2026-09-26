@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Kas Koyna Agro Tourism"
+description = "A premium, responsive agro-tourism and restaurant website for Kas Koyna in Bamnoli, Satara, with rich nature storytelling, attractions, activities, packages, gallery, and visit enquiries."
+version = "1.0.0"
+id = "artifacts/kas-koyna-agro-tourism"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21395
+
+[services.development]
+run = "pnpm --filter @workspace/kas-koyna-agro-tourism run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/kas-koyna-agro-tourism", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/kas-koyna-agro-tourism/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21395"
+BASE_PATH = "/"

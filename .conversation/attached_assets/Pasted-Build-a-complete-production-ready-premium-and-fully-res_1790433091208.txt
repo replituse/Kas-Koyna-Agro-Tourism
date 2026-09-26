@@ -1,0 +1,929 @@
+Build a complete, production-ready, premium and fully responsive restaurant + agro-tourism website for:
+
+KAS KOYNA AGRO TOURISM
+Bamnoli, Satara, Maharashtra
+
+IMPORTANT:
+This is a redesign/modernization project for the existing business website:
+https://kaskoynaagrotourism.com/
+
+Use the existing website as the primary source of truth for the business information, attractions, activities, gallery content, packages, testimonials, contact information, and social-media links.
+
+DO NOT copy the old website's design.
+Create a completely new, premium, modern, elegant and visually attractive design while keeping the business identity and factual information consistent with the original website.
+
+--------------------------------------------------
+1. BRAND / LOGO
+--------------------------------------------------
+
+Use the uploaded Kas Koyna Agro Tourism logo image as the official website logo.
+
+Do NOT recreate or redesign the logo.
+
+Use the uploaded logo in:
+- Header
+- Mobile navigation
+- Footer
+
+Make sure the logo remains sharp, properly sized and responsive on all screen sizes.
+
+Brand feel:
+- Nature
+- Premium agro-tourism
+- Restaurant / local cuisine
+- Mountains
+- Lake / Koyna backwaters
+- Adventure
+- Peaceful getaway
+- Authentic Maharashtra experience
+
+--------------------------------------------------
+2. OVERALL DESIGN DIRECTION
+--------------------------------------------------
+
+Create a premium hospitality/agro-tourism website inspired by modern luxury resorts, boutique restaurants and nature retreats.
+
+The website should feel:
+- Premium
+- Clean
+- Warm
+- Natural
+- Elegant
+- Trustworthy
+- Modern
+- Relaxing
+- Highly visual
+
+Use a LIGHT overall theme.
+
+Suggested visual direction:
+- White / warm ivory backgrounds
+- Soft natural greens
+- Forest green accents
+- Fresh leaf tones
+- Subtle earthy brown
+- Very light beige sections
+- Small premium gold/bronze accents where appropriate
+- Dark green typography for headings
+- Excellent contrast and readability
+
+Do NOT make the website look like a generic corporate template.
+
+Use:
+- Large high-quality nature/restaurant imagery
+- Rounded image corners where appropriate
+- Elegant cards
+- Glass/transparent overlays only when visually useful
+- Subtle shadows
+- Premium spacing
+- Large typography
+- Clean grids
+- Smooth section transitions
+- Beautiful CTA buttons
+
+The design should communicate:
+"Escape to nature, enjoy authentic food, experience adventure."
+
+--------------------------------------------------
+3. WEBSITE STRUCTURE
+--------------------------------------------------
+
+Create these pages/routes:
+
+1. Home
+2. About
+3. Gallery
+4. Attractions
+5. Activities
+6. Campaign
+7. Packages
+8. Contact
+9. Privacy Policy
+10. FAQ
+
+Use proper React routing.
+
+All navigation links must work correctly.
+
+--------------------------------------------------
+4. HEADER / NAVBAR
+--------------------------------------------------
+
+Create a premium sticky header.
+
+Desktop:
+- Logo on left
+- Home
+- About
+- Gallery
+- Attractions
+- Activities
+- Campaign
+- Packages
+- Contact
+- Prominent "Plan Your Visit" / "Contact Us" CTA
+
+Mobile:
+- Logo
+- Hamburger menu
+- Smooth slide/open animation
+- All navigation links
+- CTA
+
+Header behavior:
+- Transparent/overlay header on the hero section initially if it looks good
+- On scroll, transform into a clean white/light premium sticky navbar
+- Add subtle shadow after scrolling
+- Smooth transition
+
+Do not make the navbar oversized.
+
+--------------------------------------------------
+5. HOME PAGE
+--------------------------------------------------
+
+Create a visually stunning premium hero section.
+
+Use real Kas Koyna / Bamnoli / Koyna / Vasota / nature / restaurant images.
+
+Hero concept:
+
+"KAS KOYNA AGRO TOURISM"
+
+Possible supporting heading:
+
+"Where Nature, Adventure & Authentic Flavours Meet"
+
+Supporting text should communicate the experience of:
+- Nature
+- Authentic local food
+- Comfortable stay
+- Adventure
+- Trekking
+- Boating
+- Camping
+- Family/group experiences
+
+Hero buttons:
+- Explore Kas Koyna
+- View Packages
+- Contact Us
+
+Add a subtle scroll-down indicator.
+
+Use:
+- Full-width hero image/video-style visual
+- Dark/light gradient overlay where necessary
+- Elegant text animation
+- Parallax effect if performance remains good
+
+Do NOT overuse animation.
+
+--------------------------------------------------
+6. HOME - INTRODUCTION
+--------------------------------------------------
+
+Create an elegant "Welcome to Kas Koyna" section.
+
+Use factual content from the original website.
+
+Communicate that Kas Koyna Agro Tourism is located in Bamnoli near Mahabaleshwar/Satara and offers a different holiday experience surrounded by nature.
+
+Mention experiences such as:
+- Authentic local cuisine
+- Cottage/stay experience
+- Trekking
+- Kayaking
+- Sightseeing
+- Camping
+- Boating
+- Nature experiences
+
+Use a premium split layout:
+Image + text + small feature cards.
+
+Add CTA:
+"Discover Our Story"
+
+--------------------------------------------------
+7. EXPERIENCE / HIGHLIGHTS SECTION
+--------------------------------------------------
+
+Create 4-6 premium feature cards.
+
+Examples:
+- Authentic Local Cuisine
+- Nature Stay
+- Adventure & Trekking
+- Boating & Water Experiences
+- Camping
+- Scenic Getaway
+
+Each card should have:
+- Elegant icon
+- Short description
+- Hover animation
+- Image or visual treatment
+
+Cards should animate into view on scroll.
+
+--------------------------------------------------
+8. ATTRACTIONS SECTION
+--------------------------------------------------
+
+Create a premium Attractions page and a featured section on Home.
+
+Use information from the original website.
+
+Include attractions such as:
+
+- Vasota Jungle Trek
+- Koyna Wildlife Sanctuary
+- Bamnoli
+- Tapola / Shivsagar Lake
+- Datta Mandir
+- Kaas Plateau / nearby regional attractions where appropriate
+
+Each attraction card should include:
+- Large image
+- Title
+- Short factual description
+- "Explore Attraction" button
+
+Use beautiful image layouts rather than boring uniform cards.
+
+For Vasota, visually emphasize:
+- Dense forest
+- Trekking
+- Fort
+- Shivsagar Lake views
+- Adventure
+
+Do not invent unsupported business claims.
+
+--------------------------------------------------
+9. ACTIVITIES PAGE
+--------------------------------------------------
+
+Create a highly visual Activities page.
+
+Use the activities available on the original website, including where applicable:
+
+- Vasota Jungle Trek
+- Boating
+- Rafting / water activities
+- Fishing
+- Swimming with life jackets
+- Mud Bath
+- Cricket
+- Chess
+- Badminton
+- Carrom
+- Firecamp
+
+Present activities in a premium responsive grid.
+
+Each activity:
+- Image
+- Icon
+- Title
+- Short description
+- Hover effect
+
+Create categories:
+Adventure
+Water Experiences
+Outdoor Fun
+Relaxation
+Family Activities
+
+--------------------------------------------------
+10. GALLERY PAGE
+--------------------------------------------------
+
+Create a premium masonry-style responsive gallery.
+
+Use real images from the original Kas Koyna website wherever technically/legalistically appropriate.
+
+Categories/filter tabs:
+- Nature
+- Resort
+- Food
+- Activities
+- Trekking
+- Camping
+- Boating
+
+Features:
+- Smooth filtering
+- Image hover effects
+- Lightbox
+- Full-screen image viewer
+- Next/previous controls
+- Close button
+- Keyboard support if possible
+
+Images should maintain aspect ratio and not look stretched.
+
+If an original image cannot be reliably loaded, use high-quality relevant placeholder imagery rather than broken image links.
+
+Do not use random unrelated restaurant photos.
+
+--------------------------------------------------
+11. CAMPAIGN PAGE
+--------------------------------------------------
+
+Create a dedicated Campaign / Special Experiences page.
+
+This page should be suitable for:
+- Seasonal campaigns
+- Monsoon experiences
+- Trekking campaigns
+- Camping campaigns
+- Group/family experiences
+- Festival/holiday offers
+- Nature experiences
+
+Use an attractive editorial layout.
+
+Add:
+- Campaign hero
+- Featured campaigns
+- Seasonal experience cards
+- CTA to contact/WhatsApp
+
+Do not invent active offers or prices.
+
+If current campaign information is unavailable, create clearly marked editable placeholder campaign content that can easily be updated later.
+
+--------------------------------------------------
+12. PACKAGES PAGE
+--------------------------------------------------
+
+Create a premium packages section/page.
+
+Use package information available on the original website.
+
+Possible categories:
+- Stay packages
+- Vasota trek packages
+- Camping packages
+- Adventure packages
+- Group packages
+- Custom plans
+
+Each package card:
+- Image
+- Package name
+- Short description
+- Highlights
+- CTA "Enquire Now"
+
+IMPORTANT:
+Do not invent prices.
+
+If exact pricing is not available from the original website, show:
+"Contact us for current pricing"
+
+Add:
+"Customize Your Plan" CTA.
+
+--------------------------------------------------
+13. TESTIMONIALS
+--------------------------------------------------
+
+Add a premium testimonials section on the HOME PAGE.
+
+Use genuine testimonials/content available on the existing website.
+
+Examples from the existing site include feedback mentioning:
+- Beautiful surroundings
+- Boating experience
+- Food
+- Group experience
+- Helpful management
+- Comfortable stay
+
+Display testimonials in a modern carousel.
+
+Include:
+- Quote
+- Guest name when available
+- Star-style visual only if appropriate
+- Smooth autoplay
+- Manual arrows
+- Mobile swipe support
+
+Do not fabricate reviews.
+
+--------------------------------------------------
+14. RESTAURANT / FOOD SECTION
+--------------------------------------------------
+
+Since this is also being positioned as a restaurant/agro-tourism destination, create a beautiful food experience section.
+
+Heading:
+
+"Authentic Flavours of Maharashtra"
+
+Communicate the existing site's description of authentic local cuisine prepared in traditional style.
+
+Use beautiful food imagery.
+
+Include:
+- Traditional Maharashtrian cuisine
+- Fresh/local food experience
+- Traditional preparation
+- Family dining experience
+
+Do not invent specific dishes unless supported by the original website.
+
+CTA:
+"Plan Your Dining Experience"
+
+--------------------------------------------------
+15. CONTACT PAGE
+--------------------------------------------------
+
+Create a premium Contact page.
+
+Display these exact business details:
+
+Phone:
++91 9423260999
++91 7719905999
+
+Email:
+kaskoynaagrotourism@gmail.com
+
+Address:
+At-Shembadi, Post-Bamnoli,
+Tal-Jawali, Dist-Satara,
+Satara, Maharashtra 415002
+
+Create clickable:
+- Phone links
+- Email link
+- WhatsApp link
+
+Contact form fields:
+- Full Name *
+- Phone Number *
+- Email
+- Subject
+- Message *
+
+Add proper validation.
+
+Show success/error states.
+
+Do not expose API keys in frontend code.
+
+--------------------------------------------------
+16. GOOGLE MAP
+--------------------------------------------------
+
+Add a Google Maps section on the Contact page.
+
+Show the Kas Koyna Agro Tourism location/address.
+
+Use a responsive map iframe/embed or Google Maps link.
+
+Also add:
+"Get Directions"
+
+button.
+
+Do not hard-code a wrong location.
+
+Use the exact business address:
+At-Shembadi, Post-Bamnoli,
+Tal-Jawali, Dist-Satara,
+Satara, Maharashtra 415002
+
+--------------------------------------------------
+17. WHATSAPP FLOATING BUTTON
+--------------------------------------------------
+
+Add a fixed circular WhatsApp button at the bottom-right corner on every page.
+
+Number:
++91 9423260999
+
+When clicked, redirect to WhatsApp with this pre-filled message:
+
+"Hello Kas koyna agrotourism i am interested in your restaurant and give me more details regarding plan please connect to me"
+
+Use the correct WhatsApp URL encoding.
+
+Example behavior:
+https://wa.me/919423260999?text=...
+
+Button requirements:
+- Circular
+- WhatsApp icon
+- Premium subtle shadow
+- Hover animation
+- Small pulse animation
+- Tooltip: "Chat with us on WhatsApp"
+- Mobile friendly
+- Must not cover important UI/buttons
+
+--------------------------------------------------
+18. CONTACT / ENQUIRY CTA
+--------------------------------------------------
+
+Throughout the website add strategic CTA sections.
+
+Examples:
+
+"Plan Your Escape"
+"Experience Kas Koyna"
+"Explore Our Packages"
+"Talk to Us"
+"Plan Your Visit"
+
+CTA buttons should scroll or navigate to Contact/Packages.
+
+--------------------------------------------------
+19. SOCIAL MEDIA
+--------------------------------------------------
+
+Use the same official social media links/handles that are available on the original Kas Koyna Agro Tourism website.
+
+Do not invent social media URLs.
+
+Place social icons in:
+- Header if appropriate
+- Contact page
+- Footer
+
+Icons:
+- Instagram
+- Facebook
+- YouTube
+- Any other official social profile actually present on the original website
+
+If a social URL cannot be verified, leave it as an editable configuration value rather than creating a fake link.
+
+--------------------------------------------------
+20. FOOTER
+--------------------------------------------------
+
+Create a premium multi-column footer.
+
+Column 1:
+Kas Koyna Agro Tourism
+
+Short description:
+A nature-focused agro-tourism destination in Bamnoli, Satara offering authentic local cuisine, stay experiences, adventure and beautiful surroundings.
+
+Column 2:
+Quick Links
+- Home
+- About
+- Gallery
+- Attractions
+- Activities
+- Campaign
+- Packages
+- Contact
+
+Column 3:
+Explore
+- Vasota
+- Bamnoli
+- Tapola
+- Koyna Wildlife Sanctuary
+- FAQ
+
+Column 4:
+Contact
+- +91 9423260999
+- +91 7719905999
+- kaskoynaagrotourism@gmail.com
+- At-Shembadi, Post-Bamnoli,
+  Tal-Jawali, Dist-Satara,
+  Satara, Maharashtra 415002
+
+Social icons below/alongside.
+
+Footer bottom:
+Privacy Policy
+FAQ
+Contact Us
+
+Copyright:
+© 2025 Kas Koyna Agro Tourism. All Rights Reserved.
+
+Keep the copyright wording as requested.
+
+--------------------------------------------------
+21. FAQ PAGE
+--------------------------------------------------
+
+Create a professional FAQ page.
+
+Include questions based on actual business information such as:
+- Where is Kas Koyna Agro Tourism located?
+- What activities are available?
+- Can we contact you for customized packages?
+- What attractions are nearby?
+- Is boating available?
+- Can groups contact you for plans?
+- How can I reach Kas Koyna?
+
+Use factual information from the original website.
+
+Do not invent policies or guarantees.
+
+Use animated accordion UI.
+
+--------------------------------------------------
+22. PRIVACY POLICY
+--------------------------------------------------
+
+Create a simple professional Privacy Policy page.
+
+Include:
+- Website information
+- Contact form data
+- Cookies/basic analytics if used
+- Third-party services such as Google Maps
+- Contact information
+
+Do not claim compliance certifications that have not been verified.
+
+--------------------------------------------------
+23. ANIMATIONS
+--------------------------------------------------
+
+Use smooth premium animations throughout the website.
+
+Examples:
+- Fade-up on scroll
+- Fade-in
+- Staggered card animations
+- Image reveal
+- Gentle scale
+- Hover lift
+- Button hover
+- Navbar transition
+- Gallery transitions
+- Testimonial carousel animation
+- Page transition
+
+Animation should feel:
+"Luxury resort / premium hospitality"
+
+NOT:
+"Gaming website / excessive flashy effects"
+
+Respect prefers-reduced-motion accessibility settings.
+
+--------------------------------------------------
+24. HOVER EFFECTS
+--------------------------------------------------
+
+Add meaningful hover interactions.
+
+Images:
+- Slight zoom
+- Overlay
+- Arrow reveal
+
+Cards:
+- Subtle lift
+- Shadow transition
+- Border/accent transition
+
+Buttons:
+- Smooth background transition
+- Icon movement
+- Subtle scale
+
+Navbar:
+- Elegant active indicator
+
+Do not make hover effects excessive.
+
+--------------------------------------------------
+25. RESPONSIVE DESIGN
+--------------------------------------------------
+
+The website MUST be fully responsive.
+
+Test carefully for:
+
+320px mobile
+375px mobile
+390px mobile
+430px mobile
+768px tablet
+1024px tablet/laptop
+1280px desktop
+1440px desktop
+1920px large desktop
+
+Important:
+- No horizontal scrolling
+- No overlapping text
+- No broken images
+- No clipped buttons
+- Navigation works on mobile
+- Gallery works on mobile
+- Forms work on mobile
+- WhatsApp button stays accessible
+- Footer stacks correctly
+- Typography scales correctly
+
+--------------------------------------------------
+26. IMAGE HANDLING
+--------------------------------------------------
+
+Use real, high-quality images relevant to Kas Koyna.
+
+Prioritize images from the original website when possible.
+
+Image subjects:
+- Bamnoli
+- Koyna backwaters
+- Vasota Fort
+- Trekking
+- Camping
+- Boating
+- Mountains
+- Forest
+- Local food
+- Resort/cottages
+- Outdoor activities
+
+Use lazy loading.
+
+Use proper alt text.
+
+Use optimized image sizing to maintain performance.
+
+Never use visibly unrelated stock photos.
+
+--------------------------------------------------
+27. SEO
+--------------------------------------------------
+
+Implement basic on-page SEO.
+
+Website title:
+Kas Koyna Agro Tourism | Bamnoli, Satara
+
+Meta description:
+Experience nature, authentic local cuisine, trekking, boating, camping and agro-tourism at Kas Koyna Agro Tourism in Bamnoli, Satara, Maharashtra.
+
+Use proper:
+- H1
+- H2
+- H3
+- Meta descriptions
+- Image alt attributes
+- Semantic HTML
+- Open Graph metadata
+
+Add LocalBusiness / Restaurant / TouristAccommodation structured data where appropriate and where information is accurate.
+
+--------------------------------------------------
+28. PERFORMANCE
+--------------------------------------------------
+
+Optimize the website for:
+- Fast loading
+- Mobile performance
+- Image lazy loading
+- Code splitting where useful
+- Minimal unnecessary dependencies
+- Smooth animations without hurting performance
+
+Avoid huge unoptimized images.
+
+--------------------------------------------------
+29. ACCESSIBILITY
+--------------------------------------------------
+
+Implement:
+- Semantic HTML
+- Keyboard navigation
+- Visible focus states
+- Proper labels
+- Alt text
+- Accessible buttons
+- Accessible modal/lightbox
+- Accessible mobile navigation
+- Good color contrast
+- Reduced motion support
+
+--------------------------------------------------
+30. FUNCTIONALITY
+--------------------------------------------------
+
+Everything must actually work.
+
+Verify:
+- Navigation
+- Routing
+- Mobile menu
+- Contact form validation
+- Gallery lightbox
+- Gallery filters
+- Testimonial carousel
+- FAQ accordion
+- WhatsApp button
+- Phone links
+- Email links
+- Google Maps
+- CTA buttons
+- Scroll-to-section behavior
+- Footer links
+- Back-to-top button if included
+
+Do not create fake buttons that do nothing.
+
+--------------------------------------------------
+31. IMPORTANT CONTENT RULE
+--------------------------------------------------
+
+The existing website is the business's original website:
+
+https://kaskoynaagrotourism.com/
+
+Use it as the content/reference source.
+
+Preserve the factual business identity and important information from the original website.
+
+However:
+
+DO NOT reproduce the old website's visual design.
+
+Create a completely fresh premium website.
+
+Do not invent:
+- Fake awards
+- Fake certifications
+- Fake prices
+- Fake facilities
+- Fake testimonials
+- Fake social profiles
+- Fake business claims
+
+If information is missing, create an editable placeholder or use "Contact us for details" instead of inventing information.
+
+--------------------------------------------------
+32. VISUAL QUALITY TARGET
+--------------------------------------------------
+
+The final website should look like a professionally designed premium hospitality website created for a real resort/restaurant.
+
+It should NOT look like:
+- A basic Replit template
+- A generic Bootstrap website
+- A simple CRUD application
+- A plain restaurant landing page
+
+It SHOULD look like:
+- Premium resort website
+- Nature retreat
+- Boutique agro-tourism destination
+- Modern restaurant/hospitality brand
+
+Use strong visual hierarchy and generous whitespace.
+
+--------------------------------------------------
+33. FINAL QUALITY CHECK
+--------------------------------------------------
+
+Before completing the project, thoroughly test the entire application.
+
+Check:
+- All pages load correctly
+- No console errors
+- No broken routes
+- No broken images
+- No horizontal overflow
+- All buttons work
+- Mobile navigation works
+- Contact form validates
+- WhatsApp opens correctly
+- Phone/email links work
+- Gallery works
+- Testimonial slider works
+- FAQ works
+- Google Maps works
+- Footer links work
+- Responsive layouts work
+- Animations are smooth
+- Logo is displayed correctly
+- Website looks premium on desktop and mobile
+
+Do not stop after creating only the homepage.
+
+Build the COMPLETE website with all requested pages and working interactions.
+
+Most importantly:
+Keep the original Kas Koyna Agro Tourism business information accurate while delivering a significantly more premium, modern, elegant, responsive and visually impressive user experience.
