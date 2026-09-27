@@ -60,6 +60,9 @@ const testimonials = [
   { quote: 'The boating experience was beautiful. Our tent house was right beside the Koyna backwaters and swimming with lifejackets made the day unforgettable.', by: 'Amit Sonawale' },
   { quote: 'The food was lovely and the management was very helpful. We came as a group of 50 and everyone had a comfortable time.', by: 'Ramesh K' },
   { quote: 'Great service, picturesque mountains and a lake nearby. A comfortable budget stay for a slow weekend.', by: 'Maharashtra Instagrammers' },
+  { quote: 'The boating experience was beautiful. Our tent house was right beside the Koyna backwaters and swimming with lifejackets made the day unforgettable.', by: 'Amit Sonawale' },
+  { quote: 'The food was lovely and the management was very helpful. We came as a group of 50 and everyone had a comfortable time.', by: 'Ramesh K' },
+  { quote: 'Great service, picturesque mountains and a lake nearby. A comfortable budget stay for a slow weekend.', by: 'Maharashtra Instagrammers' },
 ];
 
 function SiteHeader() {
