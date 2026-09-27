@@ -256,6 +256,7 @@
 .newsletter-success { display: flex; align-items: center; gap: 9px; color: #f1ba76; font-size: .82rem; }
 .social-links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
 .social-link { display: grid !important; place-items: center; width: 40px; height: 40px; margin: 0 !important; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; color: #f7f2e8 !important; background: #f4ecdc; transition: transform .2s ease, color .2s ease, background-color .2s ease; }
+.site-footer .social-link { width: 40px; height: 40px; min-width: 40px; flex: 0 0 40px; aspect-ratio: 1; }
 .social-link:hover { transform: translateY(-3px); background: #fff8eb; }
 .social-instagram { color: #e4405f !important; }
 .social-facebook { color: #1877f2 !important; }
