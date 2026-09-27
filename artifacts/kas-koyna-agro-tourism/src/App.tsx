@@ -83,14 +83,16 @@ function SiteHeader() {
         <button className="menu-button" onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} data-testid="button-mobile-menu">{open ? <X /> : <Menu />}</button>
       </div>
      <nav
-        className={`mobile-nav ${open ? 'mobile-nav-open' : ''}`}
+        className={`mobile-nav ${open ? "mobile-nav-open" : ""}`}
         aria-label="Mobile navigation"
       >
         {navItems.map(([label, href]) => (
           <Link
             key={href}
             href={href}
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              setOpen(false);
+            }}
           >
             {label}
           </Link>
