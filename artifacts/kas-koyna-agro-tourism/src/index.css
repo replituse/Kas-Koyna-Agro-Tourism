@@ -255,11 +255,16 @@
 .newsletter-form button { display: grid; place-items: center; width: 47px; border: 0; border-radius: 50%; color: #182e26; background: #f1ba76; }
 .newsletter-success { display: flex; align-items: center; gap: 9px; color: #f1ba76; font-size: .82rem; }
 .social-links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
-.social-link { display: grid !important; place-items: center; width: 34px; height: 34px; margin: 0 !important; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; color: #f7f2e8 !important; background: rgba(255,255,255,.06); transition: transform .2s ease, color .2s ease, background-color .2s ease; }
-.social-link:hover { transform: translateY(-3px); color: #182e26 !important; background: #f1ba76; }
+.social-link { display: grid !important; place-items: center; width: 40px; height: 40px; margin: 0 !important; border: 1px solid rgba(255,255,255,.22); border-radius: 50%; color: #f7f2e8 !important; background: #f4ecdc; transition: transform .2s ease, color .2s ease, background-color .2s ease; }
+.social-link:hover { transform: translateY(-3px); background: #fff8eb; }
+.social-instagram { color: #e4405f !important; }
+.social-facebook { color: #1877f2 !important; }
+.social-whatsapp { color: #25d366 !important; }
+.social-youtube { color: #ff0000 !important; }
+.social-twitter { color: #1da1f2 !important; }
 .contact-socials { margin-top: 30px; }
-.contact-socials .social-link { border-color: hsl(var(--border)); color: hsl(var(--primary)) !important; background: hsl(var(--secondary)); }
-.contact-socials .social-link:hover { color: hsl(var(--primary-foreground)) !important; background: hsl(var(--primary)); }
+.contact-socials .social-link { border-color: hsl(var(--border)); background: hsl(var(--secondary)); }
+.contact-socials .social-link:hover { background: hsl(var(--card)); }
 .site-footer h3 { margin: 0 0 18px; color: #f7f2e8; font: 1.15rem var(--app-font-serif); }
 .site-footer p { color: rgba(248,244,233,.62); line-height: 1.7; font-size: .82rem; }
 .site-footer a { display: block; width: fit-content; margin: 0 0 10px; color: rgba(248,244,233,.68); text-decoration: none; font-size: .82rem; }
