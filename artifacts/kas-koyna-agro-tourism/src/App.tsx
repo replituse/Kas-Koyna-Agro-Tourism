@@ -42,7 +42,7 @@ const socialLinks = [
 
 const navItems = [
   ['Home', '/'], ['Our story', '/about'], ['Gallery', '/gallery'], ['Explore', '/attractions'],
-  ['Things to do', '/activities'], ['Packages', '/packages'], ['Contact', '/contact'],
+  ['Things to do', '/activities'], ['Packages', '/packages'], ['Contact', '/contact Us'],
 ];
 const activityItems = [
   { title: 'Vasota Jungle Trek', text: 'A forest adventure through the Koyna Wildlife Sanctuary, with a boat ride across the backwaters.', image: 'https://kaskoynaagrotourism.com/assets/web/Vasota.jpg', icon: Mountain },
@@ -82,7 +82,20 @@ function SiteHeader() {
         <Link href="/contact" className="btn-primary" data-testid="link-plan-stay">Plan your stay <ArrowUpRight size={15} /></Link>
         <button className="menu-button" onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} data-testid="button-mobile-menu">{open ? <X /> : <Menu />}</button>
       </div>
-      {open && <nav className="mobile-nav" aria-label="Mobile navigation">{navItems.map(([label, href]) => <Link key={href} href={href} data-testid={`link-mobile-${label.toLowerCase().replace(/\s/g, '-')}`}>{label}</Link>)}</nav>}
+     <nav
+        className={`mobile-nav ${open ? 'mobile-nav-open' : ''}`}
+        aria-label="Mobile navigation"
+      >
+        {navItems.map(([label, href]) => (
+          <Link
+            key={href}
+            href={href}
+            onClick={() => setOpen(false)}
+          >
+            {label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
