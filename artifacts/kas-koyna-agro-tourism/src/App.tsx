@@ -42,7 +42,7 @@ const socialLinks = [
 
 const navItems = [
   ['Home', '/'], ['Our story', '/about'], ['Gallery', '/gallery'], ['Explore', '/attractions'],
-  ['Things to do', '/activities'], ['Packages', '/packages'], ['Contact', '/contact Us'],
+  ['Activities', '/activities'], ['Packages', '/packages'], ['Contact Us', '/contact'],
 ];
 const activityItems = [
   { title: 'Vasota Jungle Trek', text: 'A forest adventure through the Koyna Wildlife Sanctuary, with a boat ride across the backwaters.', image: 'https://kaskoynaagrotourism.com/assets/web/Vasota.jpg', icon: Mountain },
