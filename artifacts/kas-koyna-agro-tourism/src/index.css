@@ -301,8 +301,36 @@
   .nav-inner { height: 72px; }
   .nav-links, .site-header .btn-primary { display: none; }
   .menu-button { display: block; }
-  .mobile-nav { display: grid; gap: 3px; padding: 0 16px 18px; background: hsl(var(--primary)); }
-  .mobile-nav a { padding: 11px 0; color: rgba(255,255,255,.88); text-decoration: none; font-weight: 700; font-size: .9rem; }
+  .mobile-nav {
+    display: grid;
+    gap: 3px;
+    padding: 0 16px;
+    background: hsl(var(--primary));
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      max-height 0.4s ease,
+      opacity 0.3s ease,
+      transform 0.4s ease,
+      padding 0.4s ease;
+  }
+
+  .mobile-nav-open {
+    max-height: 500px;
+    padding: 0 16px 18px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-nav a {
+    padding: 11px 0;
+    color: rgba(255,255,255,.88);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .9rem;
+  }
   .hero { min-height: 690px; }
   .hero-content { padding-bottom: 62px; }
   .hero-pager { right: 16px; bottom: 32px; }
