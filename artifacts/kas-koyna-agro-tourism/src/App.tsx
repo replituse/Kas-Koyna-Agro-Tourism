@@ -82,7 +82,7 @@ function SiteHeader() {
         <nav className="nav-links" aria-label="Main navigation">
           {navItems.map(([label, href]) => <Link key={href} href={href} className={location === href ? 'active' : ''} data-testid={`link-nav-${label.toLowerCase().replace(/\s/g, '-')}`}>{label}</Link>)}
         </nav>
-        <Link href="/contact" className="btn-primary" data-testid="link-plan-stay">Plan your stay <ArrowUpRight size={15} /></Link>
+        <Link href="/contact" className="btn-primary" data-testid="link-plan-stay">Book Now <ArrowUpRight size={15} /></Link>
         <button className="menu-button" onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} data-testid="button-mobile-menu">{open ? <X /> : <Menu />}</button>
       </div>
      <nav
