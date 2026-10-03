@@ -116,7 +116,7 @@
 .nav-links a:hover, .nav-links a.active { opacity: 1; color: #f3bd78; }
 .menu-button { display: none; border: 0; background: transparent; color: inherit; padding: 8px; }
 .mobile-nav { display: none; }
-.hero { min-height: 780px; display: flex; align-items: flex-start; position: relative; color: #fbf8ee; background: #263e34; }
+.hero { min-height: 780px; display: flex; align-items: end; position: relative; color: #fbf8ee; background: #263e34; }
 .hero::before { display: none; }
 .hero-slides {
   position: absolute;
@@ -144,7 +144,7 @@
 .hero-tint { position: absolute;  inset: 0;  z-index: 1; background: linear-gradient(90deg, rgba(16,35,29,.48), rgba(16,35,29,.08) 70%), linear-gradient(0deg, rgba(12,26,22,.42), rgba(12,26,22,.02) 62%), linear-gradient(120deg, rgba(22,65,47,.12), rgba(208,117,63,.03)); pointer-events: none;}
 /* .hero-content { position: relative; z-index: 1; padding-bottom: 88px; max-width: 750px; } */
 .hero-content { position: relative;  z-index: 1;  max-width: 750px;   padding: 20px 20px 20px 48px;  margin-left: 0;
-  margin-right: auto; text-align: left;  align-items: flex-start;  justify-content: flex-start; } 
+  margin-right: auto; text-align: left margin-top: -150px;  align-items: flex-start;  justify-content: flex-start; } 
 
 .hero-content .eyebrow { color: #f1ba76; }
 .hero-slide-label { color: rgba(251,248,238,.72); font: .66rem var(--app-font-mono); letter-spacing: .16em; text-transform: uppercase; }
