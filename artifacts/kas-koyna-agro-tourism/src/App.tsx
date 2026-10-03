@@ -24,9 +24,9 @@ const heroSlides = [
   { src: '/hero-cottages.jpg', alt: 'Red-roof cottage rooms at Kas Koyna', label: 'Stay close to the water' },
   { src: '/hero-lakeside-view.jpg', alt: 'Koyna backwaters and green hills seen from above', label: 'Take the long view' },
   { src: '/hero-garden-view.jpg', alt: 'Garden path and lake view beside the cottages', label: 'A slower morning' },
-  { src: '/hero-tent-room.png', alt: 'Colourful beds inside a comfortable tent room', label: 'Rest your way' },
-  { src: '/hero-camping.png', alt: 'Tents set beside the Koyna backwaters', label: 'Sleep under a wider sky' },
-  { src: '/hero-activity.png', alt: 'A lively outdoor activity at the property', label: 'Make a day of it' },
+  { src: '/hero-stay.jpg', alt: 'Colourful beds inside a comfortable tent room', label: 'Rest your way' },
+  { src: '/hero-cottages.jpg', alt: 'Tents set beside the Koyna backwaters', label: 'Sleep under a wider sky' },
+  { src: '/hero-lakeside-view.jpg', alt: 'A lively outdoor activity at the property', label: 'Make a day of it' },
   { src: '/hero-backwaters.jpg', alt: 'Quiet Koyna backwaters beside the property', label: 'Meet the backwaters' },
   { src: '/hero-stay.jpg', alt: 'A welcoming outdoor stay area at Kas Koyna', label: 'Come as you are' },
 ];
