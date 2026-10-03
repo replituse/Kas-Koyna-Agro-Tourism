@@ -21,14 +21,14 @@ const images = {
   harvest: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1400&q=85',
 };
 const heroSlides = [
-  { src: '/hero-cottages.png', alt: 'Red-roof cottage rooms at Kas Koyna', label: 'Stay close to the water' },
-  { src: '/hero-lakeside-view.png', alt: 'Koyna backwaters and green hills seen from above', label: 'Take the long view' },
-  { src: '/hero-garden-view.png', alt: 'Garden path and lake view beside the cottages', label: 'A slower morning' },
+  { src: '/hero-cottages.jpg', alt: 'Red-roof cottage rooms at Kas Koyna', label: 'Stay close to the water' },
+  { src: '/hero-lakeside-view.jpg', alt: 'Koyna backwaters and green hills seen from above', label: 'Take the long view' },
+  { src: '/hero-garden-view.jpg', alt: 'Garden path and lake view beside the cottages', label: 'A slower morning' },
   { src: '/hero-tent-room.png', alt: 'Colourful beds inside a comfortable tent room', label: 'Rest your way' },
   { src: '/hero-camping.png', alt: 'Tents set beside the Koyna backwaters', label: 'Sleep under a wider sky' },
   { src: '/hero-activity.png', alt: 'A lively outdoor activity at the property', label: 'Make a day of it' },
-  { src: '/hero-backwaters.png', alt: 'Quiet Koyna backwaters beside the property', label: 'Meet the backwaters' },
-  { src: '/hero-stay.png', alt: 'A welcoming outdoor stay area at Kas Koyna', label: 'Come as you are' },
+  { src: '/hero-backwaters.jpg', alt: 'Quiet Koyna backwaters beside the property', label: 'Meet the backwaters' },
+  { src: '/hero-stay.jpg', alt: 'A welcoming outdoor stay area at Kas Koyna', label: 'Come as you are' },
 ];
 const waLink = 'https://wa.me/919423260999?text=Hello%20Kas%20koyna%20agrotourism%20i%20am%20interested%20in%20your%20restaurant%20and%20give%20me%20more%20details%20regarding%20plan%20please%20connect%20to%20me.';
 const phoneLink = 'tel:+919423260999';
