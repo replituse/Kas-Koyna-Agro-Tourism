@@ -335,7 +335,7 @@
     font-size: .9rem;
   }
   .hero { min-height: 690px; }
-  .hero-content { padding-bottom: 62px; }
+  .hero-content { padding-bottom: 12px; }
   .hero-pager { right: 16px; bottom: 32px; }
   .scroll-cue { display: none; }
   .split-feature, .contact-grid, .package-grid { grid-template-columns: 1fr; gap: 35px; }
