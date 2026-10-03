@@ -172,7 +172,7 @@ function Home() {
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 30 }} className="reveal reveal-delay-3"><Link href="/contact" className="btn-primary" data-testid="link-hero-plan">Plan your visit <ArrowRight size={16} /></Link><Link href="/gallery" className="btn-outline" style={{ color: '#fbf8ee', borderColor: 'rgba(255,255,255,.45)' }} data-testid="link-hero-gallery">See the place <Camera size={15} /></Link></div>
         </div>
         <div className="hero-pager" aria-label="Photo story controls">{heroSlides.map((slide, index) => <button key={slide.src} className={index === heroSlide ? 'active' : ''} onClick={() => setHeroSlide(index)} aria-label={`Show photo ${index + 1}`} />)}</div>
-        <div className="scroll-cue">Scroll to wander</div>
+        {/* <div className="scroll-cue">Scroll to wander</div> */}
       </section>
 
       <section className="section-pad" data-reveal><div className="container-wide split-feature">
